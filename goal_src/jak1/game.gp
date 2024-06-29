@@ -1658,6 +1658,10 @@
 ;; the DGO file
 (custom-level-cgo "TSZ.DGO" "test-zone/testzone.gd")
 
+(build-custom-level "rockpool")
+;; the DGO file
+(custom-level-cgo "RCK.DGO" "rockpool/rockpool.gd")
+
 ;; generate the art group for a custom actor.
 ;; requires a .glb model file in custom_assets/jak1/models
 (build-actor "test-actor")
@@ -2116,6 +2120,7 @@
 )
 
 (goal-src "levels/test-zone/test-zone-obs.gc" "process-drawable")
+(goal-src "levels/rockpool/rockpool-obs.gc" "process-drawable")
 
 
 (group-list "all-code"
