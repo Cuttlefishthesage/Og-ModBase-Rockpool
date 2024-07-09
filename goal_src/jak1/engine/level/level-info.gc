@@ -123,7 +123,7 @@
     :visname 'village1-vis
     :nickname 'vi1
     :packages '(village1)
-    :sound-banks '(village1)
+    :sound-banks '()
     :music-bank 'village1
     :ambient-sounds '()
     :mood '*village1-mood*
@@ -238,7 +238,7 @@
     :visname 'beach-vis
     :nickname 'bea
     :packages '(beach)
-    :sound-banks '(beach)
+    :sound-banks '()
     :music-bank 'beach
     :ambient-sounds '()
     :mood '*beach-mood*
@@ -2023,27 +2023,27 @@
                            :name 'rockpool
                            :visname 'rockpool-vis ;; name + -vis
                            :nickname 'rck          ;; nickname
-                           :packages '()
-                           :sound-banks '()
-                           :music-bank #f
+                           :packages '(village1)
+                           :sound-banks '(village1)
+                           :music-bank 'beach
                            :ambient-sounds '()
                            :mood '*default-mood*
                            :mood-func 'update-mood-default
-                           :ocean #f
+                           :ocean '*ocean-map-village1* 
                            :sky #t
                            :continues '((new 'static 'continue-point
                                              :name "rockpool-start"
                                              :level 'rockpool
-                                             :trans (new 'static 'vector :x 0.0 :y (meters 10.) :z (meters 10.) :w 1.0)
+                                             :trans (new 'static 'vector :x (meters 534.44) :y (meters 7.50) :z (meters 483.20) :w 1.0) ;; 534.44   7.05 483.20
                                              :quat (new 'static 'quaternion  :w 1.0)
-                                             :camera-trans (new 'static 'vector :x 0.0 :y 4096.0 :z 0.0 :w 1.0)
+                                             :camera-trans (new 'static 'vector :x 0.0 :y -4096.0 :z 0.0 :w 1.0)
                                              :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
                                              :load-commands '()
                                              :vis-nick 'none
                                              :lev0 'rockpool
                                              :disp0 'display
-                                             :lev1 'village1
-                                             :disp1 'display
+                                             :lev1 #f
+                                             :disp1 #f
                                              ))
                            :tasks '()
                            :priority 100
