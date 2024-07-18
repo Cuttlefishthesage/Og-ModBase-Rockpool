@@ -56,17 +56,29 @@
   // "symbol-list": ["symbol", "sym-1", "sym-2"]
 
   // The base actor id for your custom level. If you have multiple levels, this should be unique!
-  "base_id": 30000,
+  "base_id": 39650,
 
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Note: You will still have to add them to your level's .gd file.
   "art_groups": [
+    "racer-ag",
+    "ef-plane-ag",
     "villa-starfish-ag",
     "seagull-ag",
     "lurkercrab-ag",
     "lurkerpuppy-ag",
     "lurkerworm-ag",
-    "ropebridge-52-ag"
+    "ropebridge-52-ag",
+    "ropebridge-70-ag",
+    "babak-ag",
+    "baby-spider-ag",
+    "spider-egg-ag",
+    "mother-spider-ag",
+    "sharkey-ag",
+    "race-ring-ag",
+    "sunkenfisha-ag",
+    "warpgate-ag",
+    "warp-gate-switch-ag"
   ],
 
   // If you have any custom models in the "custom_assets/jak1/models" folder that you want to use in your level, add them to this list.
@@ -79,14 +91,14 @@
   // by setting "save_texture_pngs" to true in the decompiler config.
   "textures": [
     // all textures required for the zoomer HUD
-    // "zoomerhud",
-    // "zoomerhud-dial",
-    // "zoomerhud-main-02",
-    // "zoomerhud-main-03",
-    // "zoomerhud-pieslice",
-    // "zoomerhud-heatbg-01",
-    // "zoomerhud-main-03arrow",
-    // "zoomerhud-main-03knob"
+     "zoomerhud",
+     "zoomerhud-dial",
+     "zoomerhud-main-02",
+     "zoomerhud-main-03",
+     "zoomerhud-pieslice",
+     "zoomerhud-heatbg-01",
+     "zoomerhud-main-03arrow",
+     "zoomerhud-main-03knob"
   ],
 
   // Ambients you want to use in your custom level. Ambients can be used for various things like changing the music variation (flava),
@@ -100,6 +112,54 @@
         "type": "'sound",
         "effect-name": "'wind-loop",
         "effect-param": [ "float", 11.0, 30.0, 12.0, 50.0 ], // ??, ??, ??, Max Radius
+        "cycle-speed": [ "float", -1.0, 0.0 ]
+      }
+    },
+
+    {
+      "trans": [ 629.76, 33.47, 820.26, 50.0 ],
+      "bsphere": [ 629.76, 33.47, 820.26, 50.0 ],
+      "lump": {
+        "name": "ambient-wind-rockpool2",
+        "type": "'sound",
+        "effect-name": "'wind-loop",
+        "effect-param": [ "float", 11.0, 30.0, 12.0, 50.0 ], // ??, ??, ??, Max Radius
+        "cycle-speed": [ "float", -1.0, 0.0 ]
+      }
+    },
+
+    {
+      "trans": [ 548.19, 23.12, 850.35, 20.0 ],
+      "bsphere": [ 548.19, 23.12, 850.35, 20.0 ],
+      "lump": {
+        "name": "ambient-wind-rockpool3",
+        "type": "'sound",
+        "effect-name": "'wind-loop",
+        "effect-param": [ "float", 11.0, 20.0, 12.0, 30.0 ], // ??, ??, ??, Max Radius
+        "cycle-speed": [ "float", -1.0, 0.0 ]
+      }
+    },
+
+    {
+      "trans": [ 427.36, 42.45, 764.72, 20.0 ],
+      "bsphere": [ 427.36, 42.45, 764.72, 20.0 ],
+      "lump": {
+        "name": "ambient-wind-rockpool4",
+        "type": "'sound",
+        "effect-name": "'wind-loop",
+        "effect-param": [ "float", 11.0, 20.0, 12.0, 30.0 ], // ??, ??, ??, Max Radius
+        "cycle-speed": [ "float", -1.0, 0.0 ]
+      }
+    },
+
+    {
+      "trans": [ 380.87, 30.28, 705.16, 20.0 ],
+      "bsphere": [ 380.87, 30.28, 705.16, 20.0 ],
+      "lump": {
+        "name": "ambient-wind-rockpool5",
+        "type": "'sound",
+        "effect-name": "'wind-loop",
+        "effect-param": [ "float", 11.0, 20.0, 12.0, 30.0 ], // ??, ??, ??, Max Radius
         "cycle-speed": [ "float", -1.0, 0.0 ]
       }
     },
@@ -249,6 +309,30 @@
     },
 
     {
+      "trans": [ 370.78, 23.63, 679.97, 50.0 ],
+      "bsphere": [ 370.78, 23.63, 679.97, 50.0 ],
+      "lump": {
+        "name": "ambient-wavecrash-rockpool13",
+        "type": "'sound",
+        "effect-name": "'water-lap",
+        "effect-param": [ "float", 11.0, 30.0, 12.0, 50.0 ], // ??, ??, ??, Max Radius
+        "cycle-speed": [ "float", -1.0, 0.0 ]
+      }
+    },
+
+    {
+      "trans": [ 374.31, 6.87, 598.77, 50.0 ],
+      "bsphere": [ 374.31, 6.87, 598.77, 50.0 ],
+      "lump": {
+        "name": "ambient-wavecrash-rockpool14",
+        "type": "'sound",
+        "effect-name": "'water-lap",
+        "effect-param": [ "float", 11.0, 30.0, 12.0, 50.0 ], // ??, ??, ??, Max Radius
+        "cycle-speed": [ "float", -1.0, 0.0 ]
+      }
+    },
+
+    {
       "trans": [ 550.22, 6.68, 529.42, 50.0 ],
       "bsphere": [ 550.22, 6.68, 529.42, 50.0 ],
       "lump": {
@@ -304,6 +388,18 @@
         "type": "'sound",
         "effect-name": "'seagulls-2",
         "effect-param": [ "float", 11.0, 30.0, 12.0, 50.0 ], // ??, ??, ??, Max Radius
+        "cycle-speed": [ "float", 8.0, 8.0 ]
+      }
+    },
+
+    {
+      "trans": [ 380.87, 30.28, 705.16, 20.0 ],
+      "bsphere": [ 380.87, 30.28, 705.16, 20.0 ],
+      "lump": {
+        "name": "ambient-seagull-rockpool6",
+        "type": "'sound",
+        "effect-name": "'seagulls-2",
+        "effect-param": [ "float", 11.0, 20.0, 12.0, 30.0 ], // ??, ??, ??, Max Radius
         "cycle-speed": [ "float", 8.0, 8.0 ]
       }
     },
@@ -436,6 +532,43 @@
       "bsphere": [ 697.92, 50.00, 771.94, 50.0 ],
       "lump": {
         "name": "ambient-chirp-rockpool11",
+        "type": "'sound",
+        "effect-name": "'bird-4",
+        "effect-param": [ "float", 11.0, 30.0, 12.0, 50.0 ], // ??, ??, ??, Max Radius
+        "cycle-speed": [ "float", -1.0, 0.0 ]
+      }
+    },
+
+    {
+      "trans": [ 656.33, 41.92, 792.73, 50.0 ],
+      "bsphere": [ 656.33, 41.92, 792.73, 50.0 ],
+      "lump": {
+        "name": "ambient-chirp-rockpool12",
+        "type": "'sound",
+        "effect-name": "'bird-4",
+        "effect-param": [ "float", 11.0, 30.0, 12.0, 50.0 ], // ??, ??, ??, Max Radius
+        "cycle-speed": [ "float", -1.0, 0.0 ]
+      }
+    },
+
+    {
+      "trans": [ 493.18, 47.97, 833.09, 50.0 ],
+      "bsphere": [ 493.18, 47.97, 833.09, 50.0 ],
+      "lump": {
+        "name": "ambient-chirp-rockpool13",
+        "type": "'sound",
+        "effect-name": "'bird-4",
+        "effect-param": [ "float", 11.0, 30.0, 12.0, 50.0 ], // ??, ??, ??, Max Radius
+        "cycle-speed": [ "float", -1.0, 0.0 ]
+      }
+    },
+
+
+    {
+      "trans": [ 374.31, 6.87, 598.77, 50.0 ],
+      "bsphere": [ 374.31, 6.87, 598.77, 50.0 ],
+      "lump": {
+        "name": "ambient-chirp-rockpool14",
         "type": "'sound",
         "effect-name": "'bird-4",
         "effect-param": [ "float", 11.0, 30.0, 12.0, 50.0 ], // ??, ??, ??, Max Radius
@@ -582,6 +715,45 @@
     },
 
     {
+      "trans": [ 467.16, 39.74, 800.77 ],
+      "etype": "launcher",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 467.16, 39.74, 800.77, 10 ],
+      "lump": {
+        "name": "rockpool-launcher-1",
+        "spring-height": [ "meters", 100.0 ],
+        "vis-dist": [ "meters", 200.0 ]
+      }
+    },
+
+    {
+      "trans": [ 423.91, 43.73, 758.50 ],
+      "etype": "launcher",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 423.91, 43.73, 758.50, 10 ],
+      "lump": {
+        "name": "rockpool-launcher-2",
+        "spring-height": [ "meters", 100.0 ],
+        "vis-dist": [ "meters", 200.0 ]
+      }
+    },
+
+    {
+      "trans": [ 380.87, 24.28, 705.16 ],
+      "etype": "launcher",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 380.87, 24.28, 705.16, 10 ],
+      "lump": {
+        "name": "rockpool-launcher-3",
+        "spring-height": [ "meters", 120.0 ],
+        "vis-dist": [ "meters", 200.0 ]
+      }
+    },
+
+    {
       "trans": [ 497.45, 6.67, 625.87 ], // translation
       "etype": "villa-starfish", // actor type
       "game_task": "(game-task none)", // associated game task (for powercells, etc)
@@ -646,6 +818,23 @@
           [ 562.64, 7.22, 523.33, 1.0 ],
           [ 519.23, 7.13, 516.55, 1.0 ],
           [ 470.79, 7.61, 539.10, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 375.51, 22.72, 697.36 ], // translation
+      "etype": "seagullflock", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 375.51, 22.72, 697.36, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-seagulls4",
+        "path": [
+          "vector4m",
+          [ 375.51, 22.72, 697.36, 1.0 ],
+          [ 364.70, 24.52, 647.93, 1.0 ],
+          [ 374.82, 6.82, 598.59, 1.0 ]
         ]
       }
     },
@@ -937,6 +1126,305 @@
     },
 
     {
+      "trans": [ 692.42, 44.33, 755.28 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 692.42, 44.33, 755.28, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies19",
+        "art-name": "group-village1-butterfly-sitting"
+
+      }
+    },
+
+    {
+      "trans": [ 661.18, 45.63, 801.39 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 661.18, 45.63, 801.39, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies20",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 660.69, 45.88, 804.89 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 660.69, 45.88, 804.89, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies21",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 656.33, 41.92, 792.73 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 656.33, 41.92, 792.73, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies22",
+        "art-name": "group-village1-butterfly-sitting"
+
+      }
+    },
+
+    {
+      "trans": [ 662.99, 46.04, 804.39 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 662.99, 46.04, 804.39, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies23",
+        "art-name": "group-village1-butterfly-sitting"
+
+      }
+    },
+
+    {
+      "trans": [ 592.37, 41.83, 826.76 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 592.37, 41.83, 826.76, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies24",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 526.41, 41.57, 819.30 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 526.41, 41.57, 819.30, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies25",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 493.18, 47.97, 833.09 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 493.18, 47.97, 833.09, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies26",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 474.28, 55.77, 879.45 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 474.28, 55.77, 879.45, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies27",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 580.80, 65.87, 862.93 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 580.80, 65.87, 862.93, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies28",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 570.18, 50.48, 852.20 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 570.18, 50.48, 852.20, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies29",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 593.51, 40.98, 817.78 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 593.51, 40.98, 817.78, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies30",
+        "art-name": "group-village1-butterfly-sitting"
+
+      }
+    },
+
+    {
+      "trans": [ 524.06, 41.53, 807.61 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 524.06, 41.53, 807.61, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies31",
+        "art-name": "group-village1-butterfly-sitting"
+
+      }
+    },
+
+    {
+      "trans": [ 470.52, 49.92, 841.62 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 470.52, 49.92, 841.62, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies32",
+        "art-name": "group-village1-butterfly-sitting"
+
+      }
+    },
+
+    {
+      "trans": [ 516.68, 57.12, 869.40 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 516.68, 57.12, 869.40, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies33",
+        "art-name": "group-village1-butterfly-sitting"
+
+      }
+    },
+
+    {
+      "trans": [ 547.74, 39.67, 835.53 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 547.74, 39.67, 835.53, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies34",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 525.22, 52.68, 857.96 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 525.22, 52.68, 857.96, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies35",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 427.36, 42.45, 764.72 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 427.36, 42.45, 764.72, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies36",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 370.78, 23.63, 679.97 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 370.78, 23.63, 679.97, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies37",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 374.31, 6.87, 598.77 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 374.31, 6.87, 598.77, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies38",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 363.90, 15.00, 620.11 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 363.90, 15.00, 620.11, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies39",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 366.20, 24.67, 645.14 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 366.20, 24.67, 645.14, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies40",
+        "art-name": "group-village1-butterflies"
+
+      }
+    },
+
+    {
+      "trans": [ 357.16, 24.71, 642.64 ], // translation
+      "etype": "villagea-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 357.16, 24.71, 642.64, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolbutterflies41",
+        "art-name": "group-village1-butterfly-sitting"
+
+      }
+    },
+
+    {
       "trans": [ 545.47, 6.72, 483.48 ], // translation
       "etype": "villagea-part", // actor type
       "game_task": 0, // associated game task (for powercells, etc)
@@ -945,6 +1433,84 @@
       "lump": {
         "name": "rockpoolbutterfliesintro3",
         "art-name": "group-village1-butterfly-sitting"
+
+      }
+    },
+
+    {
+      "trans": [ 548.88, 15.89, 834.90 ], // translation
+      "etype": "maincave-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 548.88, 15.89, 834.90, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolcavewaterdrip1",
+        "art-name": "group-cave-cavedrip-3"
+
+      }
+    },
+
+    {
+      "trans": [ 548.19, 23.12, 850.35 ], // translation
+      "etype": "maincave-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 548.19, 23.12, 850.35, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolcavewaterdrip2",
+        "art-name": "group-cave-cavedrip-1"
+
+      }
+    },
+
+    {
+      "trans": [ 506.53, 20.36, 860.97 ], // translation
+      "etype": "maincave-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 506.53, 20.36, 860.97, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolcavewaterdrip3",
+        "art-name": "group-cave-cavedrip-2"
+
+      }
+    },
+
+    {
+      "trans": [ 495.32, 16.25, 842.69 ], // translation
+      "etype": "maincave-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 495.32, 16.25, 842.69, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolcavewaterdrip4",
+        "art-name": "group-cave-cavedrip-2"
+
+      }
+    },
+
+    {
+      "trans": [ 507.95, 2.92, 815.69 ], // translation
+      "etype": "maincave-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 507.95, 2.92, 815.69, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolcavewaterdrip5",
+        "art-name": "group-cave-cavedrip-1"
+
+      }
+    },
+
+    {
+      "trans": [ 493.01, 4.22, 812.19 ], // translation
+      "etype": "maincave-part", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 493.01, 4.22, 812.19, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolcavewaterdrip6",
+        "art-name": "group-cave-cavedrip-2"
 
       }
     },
@@ -963,15 +1529,236 @@
     },
 
     {
-      "trans": [ 692.42, 44.33, 755.28 ], // translation
-      "etype": "villagea-part", // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
-      "bsphere": [ 692.42, 44.33, 755.28, 50 ], // bounding sphere
+      "trans": [ 667.00, -6.00, 542.37 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 667.00, -6.00, 542.37, 10 ], // bounding sphere
       "lump": {
-        "name": "rockpoolbutterflies19",
-        "art-name": "group-village1-butterfly-sitting"
+        "name": "rockpool-fishies1",
+        "path": [
+          "vector4m",
+          [ 667.00, -6.00, 542.37, 1.0 ],
+          [ 681.46, -7.00, 547.19, 1.0 ],
+          [ 704.52, -7.00, 544.15, 1.0 ],
+          [ 694.84, -6.00, 525.98, 1.0 ]
+        ]
+      }
+    },
 
+    {
+      "trans": [ 691.46, -6.00, 470.17 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 667.00, -6.00, 542.37, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fishies2",
+        "path": [
+          "vector4m",
+          [ 691.46, -6.00, 470.17, 1.0 ],
+          [ 700.72, -7.00, 459.26, 1.0 ],
+          [ 716.11, -7.00, 450.38, 1.0 ],
+          [ 737.92, -6.00, 435.18, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 751.67, -6.00, 547.74 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 751.67, -6.00, 547.74, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fishies3",
+        "path": [
+          "vector4m",
+          [ 751.67, -6.00, 547.74, 1.0 ],
+          [ 765.98, -7.00, 579.60, 1.0 ],
+          [ 756.03, -7.00, 607.32, 1.0 ],
+          [ 775.33, -6.00, 631.11, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 803.74, -6.00, 618.68 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 803.74, -6.00, 618.68, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fishies4",
+        "path": [
+          "vector4m",
+          [ 803.74, -6.00, 618.68, 1.0 ],
+          [ 792.27, -7.00, 650.06, 1.0 ],
+          [ 786.06, -7.00, 671.30, 1.0 ],
+          [ 799.49, -6.00, 695.53, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 796.14, -6.00, 736.53 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 796.14, -6.00, 736.53, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fishies5",
+        "path": [
+          "vector4m",
+          [ 796.14, -6.00, 736.53, 1.0 ],
+          [ 760.14, -7.00, 752.26, 1.0 ],
+          [ 727.56, -7.00, 745.90, 1.0 ],
+          [ 697.85, -6.00, 727.04, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 663.32, -6.00, 748.38 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 663.32, -6.00, 748.38, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fishies6",
+        "path": [
+          "vector4m",
+          [ 663.32, -6.00, 748.38, 1.0 ],
+          [ 630.83, -7.00, 758.63, 1.0 ],
+          [ 611.50, -7.00, 781.93, 1.0 ],
+          [ 580.85, -6.00, 787.38, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 543.06, -6.00, 796.86 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 543.06, -6.00, 796.86, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fishies7",
+        "path": [
+          "vector4m",
+          [ 543.06, -6.00, 796.86, 1.0 ],
+          [ 514.32, -7.00, 780.73, 1.0 ],
+          [ 485.46, -7.00, 781.30, 1.0 ],
+          [ 459.00, -6.00, 783.80, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 414.25, -6.00, 794.74 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 414.25, -6.00, 794.74, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fishies8",
+        "path": [
+          "vector4m",
+          [ 414.25, -6.00, 794.74, 1.0 ],
+          [ 385.54, -7.00, 789.73, 1.0 ],
+          [ 357.74, -7.00, 785.08, 1.0 ],
+          [ 326.50, -6.00, 772.87, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 323.59, -6.00, 719.39 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 323.59, -6.00, 719.39, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fishies9",
+        "path": [
+          "vector4m",
+          [ 323.59, -6.00, 719.39, 1.0 ],
+          [ 330.00, -7.00, 690.80, 1.0 ],
+          [ 345.22, -7.00, 671.26, 1.0 ],
+          [ 367.30, -6.00, 664.40, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 303.28, -6.00, 802.05 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 303.28, -6.00, 802.05, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fishies10",
+        "path": [
+          "vector4m",
+          [ 303.28, -6.00, 802.05, 1.0 ],
+          [ 297.66, -7.00, 820.47, 1.0 ],
+          [ 297.23, -7.00, 841.47, 1.0 ],
+          [ 304.70, -6.00, 859.91, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 389.98, -6.00, 887.46 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 389.98, -6.00, 887.46, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fishies11",
+        "path": [
+          "vector4m",
+          [ 389.98, -6.00, 887.46, 1.0 ],
+          [ 431.35, -7.00, 889.08, 1.0 ],
+          [ 452.83, -7.00, 889.59, 1.0 ],
+          [ 476.19, -6.00, 891.80, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 552.71, -6.00, 887.64 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 552.71, -6.00, 887.64, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fishies12",
+        "path": [
+          "vector4m",
+          [ 552.71, -6.00, 887.64, 1.0 ],
+          [ 583.34, -7.00, 884.28, 1.0 ],
+          [ 610.94, -7.00, 878.90, 1.0 ],
+          [ 634.05, -6.00, 873.48, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 677.47, -6.00, 866.53 ], // translation
+      "etype": "sunkenfisha", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 677.47, -6.00, 866.53, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fishies13",
+        "path": [
+          "vector4m",
+          [ 677.47, -6.00, 866.53, 1.0 ],
+          [ 698.29, -7.00, 872.41, 1.0 ],
+          [ 716.48, -7.00, 881.68, 1.0 ],
+          [ 736.79, -6.00, 890.89, 1.0 ]
+        ]
       }
     },
 
@@ -983,6 +1770,19 @@
       "bsphere": [ 723.01, 45.72, 741.72, 50 ], // bounding sphere
       "lump": {
         "name": "rockpoolropebridge1",
+        "art-name": "ropebridge-52"
+
+      }
+    },
+
+    {
+      "trans": [ 630.31, 37.75, 820.36 ], // translation
+      "etype": "ropebridge", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, -0.425, 0, 0.905 ], // quaternion
+      "bsphere": [ 630.31, 37.75, 820.36, 50 ], // bounding sphere
+      "lump": {
+        "name": "rockpoolropebridge2",
         "art-name": "ropebridge-52"
 
       }
@@ -1155,7 +1955,7 @@
       "quat": [ 0, 0, 0, 1 ], // quaternion
       "bsphere": [ 677.02, 45.68, 781.85, 10 ], // bounding sphere
       "lump": {
-        "name": "rockpool-crab5",
+        "name": "rockpool-babak1",
         "path": [
           "vector4m",
           [ 677.02, 45.68, 781.85, 1.0 ],
@@ -1202,6 +2002,3138 @@
       "lump": {
         "name": "rockpool-worm3",
         "vis-dist": [ "meters", 500.0 ]
+      }
+    },
+
+    {
+      "aid": 40100,
+      "trans": [ 504.21, 2.29, 810.24 ],
+      "etype": "baby-spider",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 504.21, 2.29, 810.24, 10 ],
+      "lump": {
+        "name": "rockpool-spider1",
+        "vis-dist": [ "meters", 20.0 ],
+        "path": [
+          "vector4m",
+          [ 504.21, 2.29, 810.24, 1.0 ],
+          [ 498.23, 2.59, 811.96, 1.0 ],
+          [ 493.73, 4.80, 821.60, 1.0 ],
+          [ 502.31, 5.06, 827.32, 1.0 ]
+        ],
+        "nav-mesh-sphere": [
+          "vector4m",
+          [ 500.85, 5.66, 819.92, 5 ]
+        ]
+      }
+    },
+
+    {
+      "aid": 40101,
+      "trans": [ 493.91, 3.78, 811.85 ],
+      "etype": "baby-spider",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 493.91, 3.78, 811.85, 10 ],
+      "lump": {
+        "name": "rockpool-spider2",
+        "vis-dist": [ "meters", 20.0 ],
+        "path": [
+          "vector4m",
+          [ 493.91, 3.78, 811.85, 1.0 ],
+          [ 507.32, 2.91, 815.59, 1.0 ],
+          [ 506.60, 4.33, 825.18, 1.0 ],
+          [ 498.43, 4.86, 826.31, 1.0 ]
+        ],
+        "nav-mesh-actor": [ "uint32", 40100 ]
+      }
+    },
+
+    {
+      "aid": 40102,
+      "trans": [ 499.80, 2.62, 808.44 ],
+      "etype": "baby-spider",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 499.80, 2.62, 808.44, 10 ],
+      "lump": {
+        "name": "rockpool-spider3",
+        "vis-dist": [ "meters", 20.0 ],
+        "path": [
+          "vector4m",
+          [ 499.80, 2.62, 808.44, 1.0 ],
+          [ 499.80, 2.62, 808.44, 1.0 ],
+          [ 506.77, 2.73, 813.47, 1.0 ],
+          [ 494.62, 3.38, 815.10, 1.0 ]
+        ],
+        "nav-mesh-actor": [ "uint32", 40100 ]
+      }
+    },
+
+    {
+      "aid": 40103,
+      "trans": [ 507.26, 2.77, 814.29 ],
+      "etype": "baby-spider",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 507.26, 2.77, 814.29, 10 ],
+      "lump": {
+        "name": "rockpool-spider4",
+        "vis-dist": [ "meters", 20.0 ],
+        "path": [
+          "vector4m",
+          [ 507.26, 2.77, 814.29, 1.0 ],
+          [ 507.32, 2.91, 815.59, 1.0 ],
+          [ 494.62, 3.38, 815.10, 1.0 ],
+          [ 506.77, 2.73, 813.47, 1.0 ]
+        ],
+        "nav-mesh-actor": [ "uint32", 40100 ]
+      }
+    },
+
+    {
+      "aid": 40104,
+      "trans": [ 501.05, 2.51, 812.25 ],
+      "etype": "baby-spider",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 501.05, 2.51, 812.25, 10 ],
+      "lump": {
+        "name": "rockpool-spider5",
+        "vis-dist": [ "meters", 20.0 ],
+        "path": [
+          "vector4m",
+          [ 501.05, 2.51, 812.25, 1.0 ],
+          [ 494.62, 3.38, 815.10, 1.0 ],
+          [ 501.05, 2.51, 812.25, 1.0 ],
+          [ 494.62, 3.38, 815.10, 1.0 ]
+        ],
+        "nav-mesh-actor": [ "uint32", 40100 ]
+      }
+    },
+
+    {
+      "aid": 40105,
+      "trans": [ 506.05, 2.48, 810.09 ],
+      "etype": "baby-spider",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 506.05, 2.48, 810.09, 10 ],
+      "lump": {
+        "name": "rockpool-spider6",
+        "vis-dist": [ "meters", 20.0 ],
+        "path": [
+          "vector4m",
+          [ 506.05, 2.48, 810.09, 1.0 ],
+          [ 501.05, 2.51, 812.25, 1.0 ],
+          [ 506.05, 2.48, 810.09, 1.0 ],
+          [ 501.05, 2.51, 812.25, 1.0 ]
+        ],
+        "nav-mesh-actor": [ "uint32", 40100 ]
+      }
+    },
+
+    {
+      "aid": 40106,
+      "trans": [ 494.51, 3.45, 811.24 ],
+      "etype": "baby-spider",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 494.51, 3.45, 811.24, 10 ],
+      "lump": {
+        "name": "rockpool-spider7",
+        "vis-dist": [ "meters", 20.0 ],
+        "path": [
+          "vector4m",
+          [ 494.51, 3.45, 811.24, 1.0 ],
+          [ 493.91, 3.78, 811.85, 1.0 ],
+          [ 494.51, 3.45, 811.24, 1.0 ],
+          [ 493.91, 3.78, 811.85, 1.0 ]
+        ],
+        "nav-mesh-actor": [ "uint32", 40100 ]
+      }
+    },
+
+    {
+      "aid": 40107,
+      "trans": [ 494.40, 5.60, 824.55 ],
+      "etype": "baby-spider",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 494.40, 5.60, 824.55, 10 ],
+      "lump": {
+        "name": "rockpool-spider8",
+        "vis-dist": [ "meters", 20.0 ],
+        "path": [
+          "vector4m",
+          [ 494.40, 5.60, 824.55, 1.0 ],
+          [ 493.91, 3.78, 811.85, 1.0 ],
+          [ 494.51, 3.45, 811.24, 1.0 ],
+          [ 493.91, 3.78, 811.85, 1.0 ]
+        ],
+        "nav-mesh-actor": [ "uint32", 40100 ]
+      }
+    },
+
+    {
+      "aid": 40108,
+      "trans": [ 502.84, 4.58, 825.59 ],
+      "etype": "baby-spider",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 502.84, 4.58, 825.59, 10 ],
+      "lump": {
+        "name": "rockpool-spider9",
+        "vis-dist": [ "meters", 20.0 ],
+        "path": [
+          "vector4m",
+          [ 502.84, 4.58, 825.59, 1.0 ],
+          [ 493.91, 3.78, 811.85, 1.0 ],
+          [ 502.84, 4.58, 825.59, 1.0 ],
+          [ 493.91, 3.78, 811.85, 1.0 ]
+        ],
+        "nav-mesh-actor": [ "uint32", 40100 ]
+      }
+    },
+
+    {
+      "aid": 40150,
+      "trans": [ 585.58, 41.03, 820.91 ], // translation
+      "etype": "lurkerpuppy", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 585.58, 41.03, 820.91, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-puppy4",
+        "path": [
+          "vector4m",
+          [ 585.58, 41.03, 820.91, 1.0 ],
+          [ 593.04, 42.00, 828.63, 1.0 ],
+          [ 599.83, 41.51, 840.57, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "aid": 40151,
+      "trans": [ 508.01, 42.51, 800.56 ],
+      "etype": "lurkerpuppy",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 508.01, 42.51, 800.56, 10 ],
+      "lump": {
+        "name": "rockpool-puppy5",
+        "vis-dist": [ "meters", 50.0 ],
+        "path": [
+          "vector4m",
+          [ 508.01, 42.51, 800.56, 1.0 ],
+          [ 487.54, 41.20, 813.71, 1.0 ],
+          [ 505.45, 41.47, 826.46, 1.0 ]
+        ],
+        "nav-mesh-actor": [ "uint32", 40150 ]
+      }
+    },
+
+    {
+      "aid": 40200,
+      "trans": [ 509.32, 49.39, 845.50 ],
+      "etype": "lurkerpuppy",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 509.32, 49.39, 845.50, 10 ],
+      "lump": {
+        "name": "rockpool-puppy6",
+        "vis-dist": [ "meters", 50.0 ],
+        "path": [
+          "vector4m",
+          [ 509.32, 49.39, 845.50, 1.0 ],
+          [ 491.72, 48.04, 841.28, 1.0 ],
+          [ 475.25, 47.24, 860.74, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "aid": 40250,
+      "trans": [ 567.33, 49.97, 849.79 ],
+      "etype": "lurkerpuppy",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 567.33, 49.97, 849.79, 10 ],
+      "lump": {
+        "name": "rockpool-puppy7",
+        "vis-dist": [ "meters", 50.0 ],
+        "path": [
+          "vector4m",
+          [ 567.33, 49.97, 849.79, 1.0 ],
+          [ 541.18, 50.43, 854.02, 1.0 ],
+          [ 517.08, 52.15, 857.97, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "aid": 40300,
+      "trans": [ 498.94, 52.59, 862.78 ],
+      "etype": "babak",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 498.94, 52.59, 862.78, 10 ],
+      "lump": {
+        "name": "rockpool-babak2",
+        "vis-dist": [ "meters", 50.0 ],
+        "path": [
+          "vector4m",
+          [ 498.94, 52.59, 862.78, 1.0 ],
+          [ 491.69, 52.49, 858.78, 1.0 ],
+          [ 485.77, 51.24, 868.12, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "aid": 40350,
+      "trans": [ 492.89, 57.59, 875.18 ],
+      "etype": "babak",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 492.89, 57.59, 875.18, 10 ],
+      "lump": {
+        "name": "rockpool-babak3",
+        "vis-dist": [ "meters", 50.0 ],
+        "path": [
+          "vector4m",
+          [ 492.89, 57.59, 875.18, 1.0 ],
+          [ 503.61, 57.48, 877.24, 1.0 ],
+          [ 511.40, 57.05, 870.53, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "aid": 40400,
+      "trans": [ 547.17, 61.46, 864.58 ],
+      "etype": "babak",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 547.17, 61.46, 864.58, 10 ],
+      "lump": {
+        "name": "rockpool-babak4",
+        "vis-dist": [ "meters", 50.0 ],
+        "path": [
+          "vector4m",
+          [ 547.17, 61.46, 864.58, 1.0 ],
+          [ 556.97, 62.75, 865.22, 1.0 ],
+          [ 565.73, 63.87, 863.30, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "aid": 40450,
+      "trans": [ 523.91, 44.72, 846.10 ],
+      "etype": "babak",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 523.91, 44.72, 846.10, 10 ],
+      "lump": {
+        "name": "rockpool-babak5",
+        "vis-dist": [ "meters", 50.0 ],
+        "path": [
+          "vector4m",
+          [ 523.91, 44.72, 846.10, 1.0 ],
+          [ 523.87, 43.49, 838.85, 1.0 ],
+          [ 519.17, 45.25, 843.83, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "aid": 40500,
+      "trans": [ 370.57, 23.89, 675.45 ],
+      "etype": "babak",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 370.57, 23.89, 675.45, 10 ],
+      "lump": {
+        "name": "rockpool-babak6",
+        "vis-dist": [ "meters", 50.0 ],
+        "path": [
+          "vector4m",
+          [ 370.57, 23.89, 675.45, 1.0 ],
+          [ 374.02, 22.79, 683.60, 1.0 ],
+          [ 376.90, 22.49, 695.03, 1.0 ]
+        ]
+      }
+    },
+
+    {
+      "trans": [ 500.79, 0.0, 599.04 ], // translation
+      "etype": "water-anim", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 500.79, 0.0, 599.04, 200.0 ], // bounding sphere
+      "lump": {
+        "vol": [
+          "vector",
+          [ 1.0, 0.0, 0.0, 3469393.92 ], // +x (+x in blender)
+          [ -1.0, 0.0, 0.0, -633118.72 ], // -x (inverted x in blender because of the -1)
+          [ 0.0, 1.0, 0.0, 0.0000 ], // +y (+z in blender)
+          [ 0.0, -1.0, 0.0, 34267.1616 ], // -y (inverted z in blender because of the -1)
+          [ 0.0, 0.0, 1.0, 3871784.96 ], // +z (-y in blender)
+          [ 0.0, 0.0, -1.0, 1035509.76 ] // -z (+y in blender)
+        ],
+        "name": "rockpool-ocean-vol",
+        "water-height": [ "float", 0.0, 2048.0, 8192.0, 1048588.0 ], // camera height, ?, wadledept, flags
+        "look": [ "int32", 36 ],
+        "vis-dist": [ "meters", 200.0 ]
+      }
+    },
+
+    {
+      "trans": [ 489.34, 9.51, 713.22 ], // translation
+      "etype": "racer", // actor type
+      "game_task": "(game-task none)", // associated game task TO SPAWN THE ZOOMER
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 489.34, 9.51, 713.22, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-racer"
+      }
+    },
+
+    {
+      "aid": 40550,
+      "trans": [ 519.66, -2.59, 594.47 ], // translation
+      "etype": "sharkey", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 519.66, -2.59, 594.47, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-sharkey",
+        "water-height": [ "float", 0.000, 0.000, 0.000 ]
+      }
+    },
+    ////////CRATES///////
+    {
+      "trans": [ 474.20, 11.51, 590.10 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 474.20, 11.51, 590.10, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-1",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 474.12, 11.49, 592.54 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 474.12, 11.49, 592.54, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-2",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 610.75, 6.42, 542.87 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 610.75, 6.42, 542.87, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-3",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 611.07, 6.43, 545.34 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 611.07, 6.43, 545.34, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-4",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 544.50, 6.50, 712.98 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 544.50, 6.50, 712.98, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-5",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 544.26, 6.57, 710.44 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 544.26, 6.57, 710.44, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-6",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 691.23, 45.84, 777.96 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 691.23, 45.84, 777.96, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-7",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 471.03, 49.38, 846.55 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 471.03, 49.38, 846.55, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-8",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 471.07, 49.63, 844.18 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 471.07, 49.63, 844.18, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-9",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 500.15, 57.76, 881.58 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 500.15, 57.76, 881.58, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-10",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 498.04, 57.98, 881.45 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 498.04, 57.98, 881.45, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-11",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 511.93, 41.99, 800.01 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 511.93, 41.99, 800.01, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-12",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 511.87, 42.09, 801.90 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 511.87, 42.09, 801.90, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-13",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 376.14, 18.18, 629.66 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 376.14, 18.18, 629.66, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-14",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 376.19, 18.03, 627.38 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 376.19, 18.03, 627.38, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-15",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 375.71, 6.47, 605.16 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 375.71, 6.47, 605.16, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-16",
+        "crate-type": "'wood",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 754.02, 1.97, 843.82 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 754.02, 1.97, 843.82, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-17",
+        "crate-type": "'steel",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+
+    {
+      "trans": [ 751.71, 1.99, 844.03 ], // translation
+      "etype": "crate", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 751.71, 1.99, 844.03, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-steel-crate-18",
+        "crate-type": "'steel",
+        "eco-info": [ "eco-info", "(pickup-type money)", 3 ],
+        "options": [ "int32", 8192 ] // zoomer goes through it and doesnt bump 
+      }
+    },
+    ////////ECO//////////
+    {
+      "trans": [ 466.63, 40.75, 800.67 ], // translation
+      "etype": "eco-blue", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 466.63, 40.75, 800.67, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-eco-blue1"
+      }
+    },
+
+    {
+      "trans": [ 424.03, 44.64, 759.41 ], // translation
+      "etype": "eco-blue", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 424.03, 44.64, 759.41, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-eco-blue2"
+      }
+    },
+
+    {
+      "trans": [ 380.98, 25.31, 705.54 ], // translation
+      "etype": "eco-blue", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 380.98, 25.31, 705.54, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-eco-blue3"
+      }
+    },
+
+    ///////SCOUTFLY//////
+    {
+      "trans": [ 398.13, 9.21, 507.60 ], // translation
+      "etype": "crate", // actor type
+      "game_task": 116, // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 398.13, 9.21, 507.60, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fly1",
+        "crate-type": "'iron",
+        //"eco-info": [ "int32", 8, 116 ],
+        "eco-info": [ "buzzer-info", "(game-task rockpool-buzzer)", 0 ],
+        "movie-pos": [ "meters", 398.13, 9.21, 507.60 ]
+      }
+    },
+
+    {
+      "trans": [ 598.99, 6.60, 639.26 ], // translation
+      "etype": "crate", // actor type
+      "game_task": 116, // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 598.99, 6.60, 639.26, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fly2",
+        "crate-type": "'iron",
+        //"eco-info": [ "int32", 8, 116 ],
+        "eco-info": [ "buzzer-info", "(game-task rockpool-buzzer)", 1 ],
+        "movie-pos": [ "meters", 598.99, 6.60, 639.26 ]
+      }
+    },
+
+    {
+      "trans": [ 693.10, 32.38, 676.39 ], // translation
+      "etype": "crate", // actor type
+      "game_task": 116, // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 693.10, 32.38, 676.39, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fly3",
+        "crate-type": "'iron",
+        //"eco-info": [ "int32", 8, 116 ],
+        "eco-info": [ "buzzer-info", "(game-task rockpool-buzzer)", 2 ],
+        "movie-pos": [ "meters", 693.10, 32.38, 676.39 ]
+      }
+    },
+
+    {
+      "trans": [ 570.68, 50.75, 862.59 ], // translation
+      "etype": "crate", // actor type
+      "game_task": 116, // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 570.68, 50.75, 862.59, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fly4",
+        "crate-type": "'iron",
+        //"eco-info": [ "int32", 8, 116 ],
+        "eco-info": [ "buzzer-info", "(game-task rockpool-buzzer)", 3 ],
+        "movie-pos": [ "meters", 570.68, 50.75, 862.59 ]
+      }
+    },
+
+    {
+      "trans": [ 459.81, 41.61, 860.77 ], // translation
+      "etype": "crate", // actor type
+      "game_task": 116, // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 459.81, 41.61, 860.77, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fly5",
+        "crate-type": "'iron",
+        //"eco-info": [ "int32", 8, 116 ],
+        "eco-info": [ "buzzer-info", "(game-task rockpool-buzzer)", 4 ],
+        "movie-pos": [ "meters", 459.81, 41.61, 860.77 ]
+      }
+    },
+
+    {
+      "trans": [ 372.89, 23.75, 673.90 ], // translation
+      "etype": "crate", // actor type
+      "game_task": 116, // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 372.89, 23.75, 673.90, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fly6",
+        "crate-type": "'iron",
+        //"eco-info": [ "int32", 8, 116 ],
+        "eco-info": [ "buzzer-info", "(game-task rockpool-buzzer)", 5 ],
+        "movie-pos": [ "meters", 372.89, 23.75, 673.90 ]
+      }
+    },
+
+    {
+      "trans": [ 745.13, 0.87, 492.03 ], // translation
+      "etype": "crate", // actor type
+      "game_task": 116, // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 745.13, 0.87, 492.03, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fly7",
+        "crate-type": "'iron",
+        //"eco-info": [ "int32", 8, 116 ],
+        "eco-info": [ "buzzer-info", "(game-task rockpool-buzzer)", 6 ],
+        "movie-pos": [ "meters", 745.13, 0.87, 492.03 ]
+      }
+    },
+    ///////POWERCELL/////
+    {
+      "trans": [ 581.53, 68.86, 861.29 ], // translation
+      "etype": "fuel-cell", // actor type
+      "game_task": 118, // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 581.53, 65.86, 861.29, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fuel-cell-01",
+        "eco-info": [ "int32", 6, 118 ]
+      }
+    },
+
+    {
+      "trans": [ 500.38, 8.64, 819.25 ], // translation
+      "etype": "fuel-cell", // actor type
+      "game_task": 117, // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 500.38, 5.64, 819.25, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-fuel-cell-02",
+        "eco-info": [ "int32", 6, 117 ]
+      }
+    },
+
+    ////////RACERINGS////
+    {
+      "trans": [ 446.02, 3.19, 774.55 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 446.02, 3.19, 774.55, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-01-start",
+        "timeout": [ "float", 0.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "next-actor": "race-ring-02-go"
+      }
+    },
+
+    {
+      "trans": [ 327.64, 3.19, 799.83 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 327.64, 3.19, 799.83, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-02-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-01-start",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-03-go"
+      }
+    },
+
+    {
+      "trans": [ 303.77, 3.19, 872.59 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 303.77, 3.19, 872.59, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-03-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-02-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-04-go"
+      }
+    },
+
+    {
+      "trans": [ 395.15, 3.19, 893.39 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 395.15, 3.19, 893.39, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-04-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-03-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-05-go"
+      }
+    },
+
+    {
+      "trans": [ 517.14, 3.19, 909.30 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 517.14, 3.19, 909.30, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-05-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-04-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-06-go"
+      }
+    },
+
+    {
+      "trans": [ 612.70, 3.19, 865.24 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 612.70, 3.19, 865.24, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-06-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-05-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-07-go"
+      }
+    },
+
+    {
+      "trans": [ 624.57, 3.19, 803.00 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 624.57, 3.19, 803.00, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-07-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-06-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-08-go"
+      }
+    },
+
+    {
+      "trans": [ 668.89, 3.19, 798.96 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 668.89, 3.19, 798.96, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-08-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-07-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-09-go"
+      }
+    },
+
+    {
+      "trans": [ 674.70, 3.19, 841.59 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 674.70, 3.19, 841.59, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-09-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-08-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-10-go"
+      }
+    },
+
+    {
+      "trans": [ 717.28, 3.19, 858.96 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 717.28, 3.19, 858.96, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-10-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-09-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-11-go"
+      }
+    },
+
+    {
+      "trans": [ 752.66, 4.97, 847.40 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 752.66, 4.97, 847.40, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-11-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-10-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-12-go"
+      }
+    },
+
+    {
+      "trans": [ 723.53, 3.19, 747.70 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 723.53, 3.19, 747.70, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-12-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-11-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-13-go"
+      }
+    },
+
+    {
+      "trans": [ 646.58, 3.19, 731.50 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 646.58, 3.19, 731.50, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-13-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-12-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-14-go"
+      }
+    },
+
+    {
+      "trans": [ 594.85, 3.19, 769.99 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 594.85, 3.19, 769.99, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-14-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-13-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-15-go"
+      }
+    },
+
+    {
+      "trans": [ 558.10, 3.19, 806.23 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 558.10, 3.19, 806.23, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-15-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-14-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-16-go"
+      }
+    },
+
+    {
+      "trans": [ 500.26, 3.19, 777.10 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 500.26, 3.19, 777.10, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-16-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-15-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-17-go"
+      }
+    },
+
+    {
+      "trans": [ 433.19, 3.19, 734.54 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 433.19, 3.19, 734.54, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-17-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-16-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-18-go"
+      }
+    },
+
+    {
+      "trans": [ 409.17, 3.19, 674.13 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 409.17, 3.19, 674.13, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-18-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-17-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-19-go"
+      }
+    },
+
+    {
+      "trans": [ 358.95, 3.19, 665.55 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 358.95, 3.19, 665.55, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-19-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-18-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-20-go"
+      }
+    },
+
+    {
+      "trans": [ 319.00, 3.19, 702.18 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 319.00, 3.19, 702.18, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-20-go",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 0.4444 ],
+        "prev-actor": "race-ring-19-go",
+        "alt-actor": "race-ring-01-start",
+        "next-actor": "race-ring-21-finale"
+      }
+    },
+
+    {
+      "trans": [ 324.43, 3.19, 787.43 ], // translation
+      "etype": "race-ring", // actor type
+      "game_task": 119, // associated game task (for powercells, etc)
+      "quat": [ 0.000, 0.000, 0.000, 1.000 ], // quaternion
+      "bsphere": [ 324.43, 3.19, 787.43, 10 ], // bounding sphere
+      "lump": {
+        "name": "race-ring-21-finale",
+        "timeout": [ "float", 5.0 ],
+        "rot-y": [ "meters", 1 ],
+        "prev-actor": "race-ring-20-go",
+        "alt-actor": "race-ring-01-start",
+        "movie-pos": [ "meters", 338.88, 2.04, 838.23 ],
+        "eco-info": [ "int32", 6, 119 ]
+      }
+    },
+    ////////MONEY////////
+    {
+      "trans": [ 549.23, 8.68, 501.65 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 549.23, 8.68, 501.65, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-01"
+      }
+    },
+
+    {
+      "trans": [ 561.86, 9.00, 509.64 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 561.86, 9.00, 509.64, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-02"
+      }
+    },
+
+    {
+      "trans": [ 576.22, 8.74, 513.14 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 576.22, 8.74, 513.14, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-03"
+      }
+    },
+
+    {
+      "trans": [ 597.44, 8.40, 535.63 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 597.44, 8.40, 535.63, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-04"
+      }
+    },
+
+    {
+      "trans": [ 605.33, 8.42, 548.73 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 605.33, 8.42, 548.73, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-05"
+      }
+    },
+
+    {
+      "trans": [ 614.71, 8.44, 562.99 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 614.71, 8.44, 562.99, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-06"
+      }
+    },
+
+    {
+      "trans": [ 628.63, 8.20, 578.82 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 628.63, 8.20, 578.82, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-07"
+      }
+    },
+
+    {
+      "trans": [ 639.85, 8.79, 590.16 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 639.85, 8.79, 590.16, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-08"
+      }
+    },
+
+    {
+      "trans": [ 653.88, 8.54, 600.03 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 653.88, 8.54, 600.03, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-09"
+      }
+    },
+
+    {
+      "trans": [ 548.32, 9.66, 543.39 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 548.32, 9.66, 543.39, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-10"
+      }
+    },
+    {
+      "trans": [ 545.93, 11.77, 551.83 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 545.93, 11.77, 551.83, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-11"
+      }
+    },
+
+    {
+      "trans": [ 542.61, 14.94, 558.90 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 542.61, 14.94, 558.90, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-12"
+      }
+    },
+
+    {
+      "trans": [ 537.65, 11.42, 567.60 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 537.65, 11.42, 567.60, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-13"
+      }
+    },
+
+    {
+      "trans": [ 531.81, 9.78, 574.66 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 5531.81, 9.78, 574.66, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-14"
+      }
+    },
+
+    {
+      "trans": [ 524.32, 9.23, 590.50 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 524.32, 9.23, 590.50, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-15"
+      }
+    },
+
+    {
+      "trans": [ 522.66, 9.42, 603.62 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 522.66, 9.42, 603.62, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-16"
+      }
+    },
+
+    {
+      "trans": [ 533.07, 8.44, 610.63 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 533.07, 8.44, 610.63, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-17"
+      }
+    },
+
+    {
+      "trans": [ 546.91, 7.79, 626.93 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 546.91, 7.79, 626.93, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-18"
+      }
+    },
+
+    {
+      "trans": [ 542.40, 8.68, 644.17 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 542.40, 8.68, 644.17, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-19"
+      }
+    },
+
+    {
+      "trans": [ 529.70, 8.80, 659.20 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 529.70, 8.80, 659.20, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-20"
+      }
+    },
+
+    {
+      "trans": [ 514.77, 9.74, 681.40 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 514.77, 9.74, 681.40, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-21"
+      }
+    },
+
+    {
+      "trans": [ 504.16, 11.04, 694.04 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 504.16, 11.04, 694.04, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-22"
+      }
+    },
+
+    {
+      "trans": [ 495.09, 11.64, 705.41 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 495.09, 11.64, 705.41, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-23"
+      }
+    },
+
+    {
+      "trans": [ 526.95, 8.89, 513.48 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 526.95, 8.89, 513.48, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-24"
+      }
+    },
+
+    {
+      "trans": [ 513.90, 9.38, 520.01 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 513.90, 9.38, 520.01, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-25"
+      }
+    },
+
+    {
+      "trans": [ 498.24, 10.60, 522.59 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 498.24, 10.60, 522.59, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-26"
+      }
+    },
+
+    {
+      "trans": [ 474.94, 10.11, 525.42 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 474.94, 10.11, 525.42, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-27"
+      }
+    },
+
+    {
+      "trans": [ 459.49, 9.42, 532.99 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 459.49, 9.42, 532.99, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-28"
+      }
+    },
+
+    {
+      "trans": [ 443.71, 9.55, 541.91 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 443.71, 9.55, 541.91, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-29"
+      }
+    },
+
+    {
+      "trans": [ 421.35, 10.32, 557.22 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 421.35, 10.32, 557.22, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-30"
+      }
+    },
+
+    {
+      "trans": [ 409.38, 8.85, 566.67 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 409.38, 8.85, 566.67, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-31"
+      }
+    },
+
+    {
+      "trans": [ 397.40, 5.35, 577.89 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 397.40, 5.35, 577.89, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-32"
+      }
+    },
+
+    {
+      "trans": [ 686.58, 23.31, 611.97 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 686.58, 23.31, 611.97, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-33"
+      }
+    },
+
+    {
+      "trans": [ 694.15, 34.01, 630.41 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 694.15, 34.01, 630.41, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-34"
+      }
+    },
+
+    {
+      "trans": [ 700.01, 35.50, 645.32 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 700.01, 35.50, 645.32, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-35"
+      }
+    },
+
+    {
+      "trans": [ 704.92, 40.38, 663.69 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 704.92, 40.38, 663.69, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-36"
+      }
+    },
+
+    {
+      "trans": [ 724.21, 38.36, 682.70 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 724.21, 38.36, 682.70, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-37"
+      }
+    },
+
+    {
+      "trans": [ 738.91, 40.78, 695.97 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 738.91, 40.78, 695.97, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-38"
+      }
+    },
+
+    {
+      "trans": [ 748.04, 45.72, 714.51 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 748.04, 45.72, 714.51, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-39"
+      }
+    },
+
+    {
+      "trans": [ 732.03, 48.41, 734.05 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 732.03, 48.41, 734.05, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-40"
+      }
+    },
+
+    {
+      "trans": [ 724.82, 43.55, 740.74 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 724.82, 43.55, 740.74, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-41"
+      }
+    },
+
+    {
+      "trans": [ 711.96, 47.71, 751.01 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 711.96, 47.71, 751.01, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-42"
+      }
+    },
+
+    {
+      "trans": [ 672.96, 47.42, 786.56 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 672.96, 47.42, 786.56, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-43"
+      }
+    },
+
+    {
+      "trans": [ 668.92, 52.85, 791.82 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 668.92, 52.85, 791.82, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-44"
+      }
+    },
+
+    {
+      "trans": [ 664.30, 47.06, 796.72 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 664.30, 47.06, 796.72, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-45"
+      }
+    },
+
+    {
+      "trans": [ 675.42, 13.52, 598.41 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 675.42, 13.52, 598.41, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-46"
+      }
+    },
+
+    {
+      "trans": [ 677.01, 18.39, 606.81 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 677.01, 18.39, 606.81, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-47"
+      }
+    },
+
+    {
+      "trans": [ 718.98, 43.65, 745.28 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 718.98, 43.65, 745.28, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-48"
+      }
+    },
+
+    {
+      "trans": [ 646.80, 38.43, 807.19 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 646.80, 38.43, 807.19, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-49"
+      }
+    },
+
+    {
+      "trans": [ 643.21, 37.37, 809.51 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 643.21, 37.37, 809.51, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-50"
+      }
+    },
+
+    {
+      "trans": [ 640.09, 40.49, 813.43 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 640.09, 40.49, 813.43, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-51"
+      }
+    },
+
+    {
+      "trans": [ 635.44, 35.48, 816.58 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 635.44, 35.48, 816.58, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-52"
+      }
+    },
+
+    {
+      "trans": [ 630.64, 35.39, 819.64 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 630.64, 35.39, 819.64, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-53"
+      }
+    },
+
+    {
+      "trans": [ 623.58, 35.84, 825.79 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 623.58, 35.84, 825.79, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-54"
+      }
+    },
+
+    {
+      "trans": [ 619.69, 39.49, 829.22 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 619.69, 39.49, 829.22, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-55"
+      }
+    },
+
+    {
+      "trans": [ 614.26, 38.34, 833.40 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 614.26, 38.34, 833.40, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-56"
+      }
+    },
+
+    {
+      "trans": [ 599.07, 43.54, 837.55 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 599.07, 43.54, 837.55, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-57"
+      }
+    },
+
+    {
+      "trans": [ 585.88, 43.36, 833.21 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 585.88, 43.36, 833.21, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-58"
+      }
+    },
+
+    {
+      "trans": [ 569.75, 42.07, 832.40 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 569.75, 42.07, 832.40, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-59"
+      }
+    },
+
+    {
+      "trans": [ 547.67, 41.56, 836.51 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 547.67, 41.56, 836.51, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-60"
+      }
+    },
+
+    {
+      "trans": [ 537.73, 42.36, 830.14 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 537.73, 42.36, 830.14, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-61"
+      }
+    },
+
+    {
+      "trans": [ 527.67, 43.18, 824.80 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 527.67, 43.18, 824.80, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-62"
+      }
+    },
+
+    {
+      "trans": [ 513.99, 43.79, 818.67 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 513.99, 43.79, 818.67, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-63"
+      }
+    },
+
+    {
+      "trans": [ 501.54, 44.56, 813.94 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 501.54, 44.56, 813.94, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-64"
+      }
+    },
+
+    {
+      "trans": [ 487.14, 43.09, 808.31 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 487.14, 43.09, 808.31, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-65"
+      }
+    },
+
+    {
+      "trans": [ 521.41, 46.65, 842.14 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 521.41, 46.65, 842.14, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-66"
+      }
+    },
+    {
+      "trans": [ 510.93, 50.93, 843.46 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 510.93, 50.93, 843.46, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-67"
+      }
+    },
+
+    {
+      "trans": [ 513.73, 53.81, 856.24 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 513.73, 53.81, 856.24, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-68"
+      }
+    },
+
+    {
+      "trans": [ 500.82, 54.26, 861.02 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 500.82, 54.26, 861.02, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-69"
+      }
+    },
+
+    {
+      "trans": [ 492.95, 54.28, 862.40 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 492.95, 54.28, 862.40, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-70"
+      }
+    },
+
+    {
+      "trans": [ 486.56, 53.28, 868.95 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 486.56, 53.28, 868.95, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-71"
+      }
+    },
+
+    {
+      "trans": [ 481.42, 57.12, 877.76 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 481.42, 57.12, 877.76, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-72"
+      }
+    },
+
+    {
+      "trans": [ 486.44, 61.88, 877.96 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 486.44, 61.88, 877.96, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-73"
+      }
+    },
+
+    {
+      "trans": [ 492.95, 59.69, 875.90 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 492.95, 59.69, 875.90, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-74"
+      }
+    },
+
+    {
+      "trans": [ 517.02, 60.68, 874.76 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 517.02, 60.68, 874.76, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-75"
+      }
+    },
+
+    {
+      "trans": [ 535.51, 66.70, 867.98 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 535.51, 66.70, 867.98, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-76"
+      }
+    },
+
+    {
+      "trans": [ 547.82, 63.58, 864.76 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 547.82, 63.58, 864.76, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-77"
+      }
+    },
+
+    {
+      "trans": [ 553.38, 64.48, 865.57 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 553.38, 64.48, 865.57, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-78"
+      }
+    },
+
+    {
+      "trans": [ 499.98, 50.21, 840.48 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 499.98, 50.21, 840.48, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-79"
+      }
+    },
+
+    {
+      "trans": [ 486.29, 50.31, 842.94 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 486.29, 50.31, 842.94, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-80"
+      }
+    },
+
+    {
+      "trans": [ 475.34, 49.83, 853.59 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 475.34, 49.83, 853.59, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-81"
+      }
+    },
+
+    {
+      "trans": [ 522.95, 54.67, 862.88 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 522.95, 54.67, 862.88, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-82"
+      }
+    },
+
+    {
+      "trans": [ 537.83, 54.30, 872.40 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 537.83, 54.30, 872.40, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-83"
+      }
+    },
+
+    {
+      "trans": [ 542.17, 53.67, 863.89 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 542.17, 53.67, 863.89, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-84"
+      }
+    },
+
+    {
+      "trans": [ 552.16, 51.91, 853.26 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 552.16, 51.91, 853.26, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-85"
+      }
+    },
+
+    {
+      "trans": [ 568.77, 52.13, 849.75 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 568.77, 52.13, 849.75, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-86"
+      }
+    },
+
+    {
+      "trans": [ 583.47, 53.17, 848.89 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 583.47, 53.17, 848.89, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-87"
+      }
+    },
+
+    {
+      "trans": [ 578.64, 45.65, 812.66 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 578.64, 45.65, 812.66, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-88"
+      }
+    },
+
+    {
+      "trans": [ 578.65, 42.69, 812.66 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 578.65, 42.69, 812.66, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-89"
+      }
+    },
+
+    {
+      "trans": [ 578.65, 39.01, 812.66 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 578.65, 39.01, 812.66, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-90"
+      }
+    },
+
+    {
+      "trans": [ 572.72, 42.02, 818.15 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 572.72, 42.02, 818.15, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-91"
+      }
+    },
+
+    {
+      "trans": [ 569.08, 34.56, 821.25 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 569.08, 34.56, 821.25, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-92"
+      }
+    },
+
+    {
+      "trans": [ 562.35, 37.39, 823.22 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 562.35, 37.39, 823.22, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-93"
+      }
+    },
+
+    {
+      "trans": [ 550.92, 27.00, 836.43 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 550.92, 27.00, 836.43, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-94"
+      }
+    },
+
+    {
+      "trans": [ 544.57, 24.71, 849.96 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 544.57, 24.71, 849.96, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-95"
+      }
+    },
+
+    {
+      "trans": [ 537.36, 22.09, 856.48 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 537.36, 22.09, 856.48, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-96"
+      }
+    },
+
+    {
+      "trans": [ 524.23, 22.26, 861.23 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 524.23, 22.26, 861.23, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-97"
+      }
+    },
+
+    {
+      "trans": [ 514.08, 22.78, 860.23 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 514.08, 22.78, 860.23, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-98"
+      }
+    },
+
+    {
+      "trans": [ 504.87, 22.32, 856.15 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 504.87, 22.32, 856.15, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-99"
+      }
+    },
+
+    {
+      "trans": [ 560.81, 65.22, 864.70 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 560.81, 65.22, 864.70, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-100"
+      }
+    },
+
+    {
+      "trans": [ 526.77, 63.99, 875.89 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 526.77, 63.99, 875.89, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-101"
+      }
+    },
+
+    {
+      "trans": [ 466.63, 43.75, 800.67 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 466.63, 43.75, 800.67, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-102"
+      }
+    },
+
+    {
+      "trans": [ 466.63, 45.75, 800.67 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 466.63, 45.75, 800.67, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-103"
+      }
+    },
+
+    {
+      "trans": [ 466.63, 47.75, 800.67 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 466.63, 47.75, 800.67, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-104"
+      }
+    },
+
+    {
+      "trans": [ 424.03, 47.64, 759.41 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 424.03, 47.64, 759.41, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-105"
+      }
+    },
+
+    {
+      "trans": [ 424.03, 49.64, 759.41 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 424.03, 49.64, 759.41, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-106"
+      }
+    },
+
+    {
+      "trans": [ 424.03, 51.64, 759.41 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 424.03, 51.64, 759.41, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-107"
+      }
+    },
+
+    {
+      "trans": [ 377.63, 25.05, 698.19 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 377.63, 25.05, 698.19, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-108"
+      }
+    },
+
+    {
+      "trans": [ 372.78, 24.39, 687.56 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 372.78, 24.39, 687.56, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-109"
+      }
+    },
+
+    {
+      "trans": [ 367.99, 26.20, 675.44 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 367.99, 26.20, 675.44, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-110"
+      }
+    },
+
+    {
+      "trans": [ 366.14, 26.54, 647.82 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 366.14, 26.54, 647.82, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-111"
+      }
+    },
+
+    {
+      "trans": [ 362.27, 26.68, 641.37 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 362.27, 26.68, 641.37, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-112"
+      }
+    },
+
+    {
+      "trans": [ 360.37, 23.92, 634.61 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 360.37, 23.92, 634.61, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-113"
+      }
+    },
+
+    {
+      "trans": [ 372.82, 20.36, 632.17 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 372.82, 20.36, 632.17, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-114"
+      }
+    },
+
+    {
+      "trans": [ 363.81, 16.94, 618.84 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 363.81, 16.94, 618.84, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-115"
+      }
+    },
+
+    {
+      "trans": [ 369.23, 14.43, 609.11 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 369.23, 14.43, 609.11, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-116"
+      }
+    },
+
+    {
+      "trans": [ 362.44, 11.65, 605.59 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 362.44, 11.65, 605.59, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-117"
+      }
+    },
+
+    {
+      "trans": [ 371.27, 9.14, 599.62 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 371.27, 9.14, 599.62, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-118"
+      }
+    },
+
+    {
+      "trans": [ 378.53, 8.09, 593.27 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 378.53, 8.09, 593.27, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-119"
+      }
+    },
+
+    {
+      "trans": [ 387.01, 6.42, 586.85 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 387.01, 6.42, 586.85, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-120"
+      }
+    },
+    ///// WATER AREA ORB START /////
+    {
+      "trans": [ 417.89, 2.19, 779.15 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 417.89, 2.19, 779.15, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-121"
+      }
+    },
+
+    {
+      "trans": [ 402.76, 2.19, 778.40 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 402.76, 2.19, 778.40, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-122"
+      }
+    },
+
+    {
+      "trans": [ 384.02, 2.19, 776.62 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 384.02, 2.19, 776.62, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-123"
+      }
+    },
+
+    {
+      "trans": [ 366.34, 2.19, 777.68 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 366.34, 2.19, 777.68, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-124"
+      }
+    },
+
+    {
+      "trans": [ 346.20, 2.19, 787.22 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 346.20, 2.19, 787.22, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-125"
+      }
+    },
+
+    {
+      "trans": [ 316.82, 2.19, 809.88 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 316.82, 2.19, 809.88, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-126"
+      }
+    },
+
+    {
+      "trans": [ 303.85, 2.19, 827.33 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 303.85, 2.19, 827.33, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-127"
+      }
+    },
+
+    {
+      "trans": [ 299.18, 2.19, 855.67 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 299.18, 2.19, 855.67, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-128"
+      }
+    },
+
+    {
+      "trans": [ 331.40, 2.19, 885.69 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 331.40, 2.19, 885.69, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-129"
+      }
+    },
+
+    {
+      "trans": [ 360.32, 2.19, 889.13 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 360.32, 2.19, 889.13, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-130"
+      }
+    },
+    {
+      "trans": [ 384.31, 2.19, 892.24 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 384.31, 2.19, 892.24, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-131"
+      }
+    },
+
+    {
+      "trans": [ 425.60, 2.19, 899.12 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 425.60, 2.19, 899.12, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-132"
+      }
+    },
+
+    {
+      "trans": [ 449.85, 2.19, 903.16 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 449.85, 2.19, 903.16, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-133"
+      }
+    },
+
+    {
+      "trans": [ 473.06, 2.19, 905.21 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 473.06, 2.19, 905.21, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-134"
+      }
+    },
+
+    {
+      "trans": [ 493.79, 2.19, 907.77 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 493.79, 2.19, 907.77, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-135"
+      }
+    },
+
+    {
+      "trans": [ 542.43, 2.19, 904.08 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 542.43, 2.19, 904.08, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-136"
+      }
+    },
+
+    {
+      "trans": [ 573.94, 2.19, 890.27 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 573.94, 2.19, 890.27, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-137"
+      }
+    },
+
+    {
+      "trans": [ 597.21, 2.19, 876.06 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 597.21, 2.19, 876.06, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-138"
+      }
+    },
+
+    {
+      "trans": [ 620.17, 2.19, 847.68 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 620.17, 2.19, 847.68, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-139"
+      }
+    },
+
+    {
+      "trans": [ 620.30, 2.19, 825.95 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 620.30, 2.19, 825.95, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-140"
+      }
+    },
+
+    {
+      "trans": [ 633.90, 2.19, 795.51 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 633.90, 2.19, 795.51, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-141"
+      }
+    },
+
+    {
+      "trans": [ 652.31, 2.19, 791.63 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 652.31, 2.19, 791.63, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-142"
+      }
+    },
+
+    {
+      "trans": [ 669.38, 2.19, 810.94 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 669.38, 2.19, 810.94, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-143"
+      }
+    },
+
+    {
+      "trans": [ 672.26, 2.19, 827.55 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 672.26, 2.19, 827.55, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-144"
+      }
+    },
+
+    {
+      "trans": [ 749.69, 2.19, 814.21 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 749.69, 2.19, 814.21, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-145"
+      }
+    },
+
+    {
+      "trans": [ 739.00, 2.19, 783.41 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 739.00, 2.19, 783.41, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-146"
+      }
+    },
+
+    {
+      "trans": [ 728.14, 2.19, 758.46 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 728.14, 2.19, 758.46, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-147"
+      }
+    },
+
+    {
+      "trans": [ 704.09, 2.19, 733.09 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 704.09, 2.19, 733.09, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-148"
+      }
+    },
+
+    {
+      "trans": [ 680.27, 2.19, 728.21 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 680.27, 2.19, 728.21, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-149"
+      }
+    },
+
+    {
+      "trans": [ 657.98, 2.19, 730.16 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 657.98, 2.19, 730.16, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-150"
+      }
+    },
+
+    {
+      "trans": [ 628.51, 2.19, 741.87 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 628.51, 2.19, 741.87, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-151"
+      }
+    },
+
+    {
+      "trans": [ 608.03, 2.19, 757.53 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 608.03, 2.19, 757.53, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-152"
+      }
+    },
+
+    {
+      "trans": [ 582.42, 2.19, 786.22 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 582.42, 2.19, 786.22, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-153"
+      }
+    },
+
+    {
+      "trans": [ 570.58, 2.19, 798.68 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 570.58, 2.19, 798.68, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-154"
+      }
+    },
+
+    {
+      "trans": [ 538.52, 2.19, 797.91 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 538.52, 2.19, 797.91, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-155"
+      }
+    },
+
+    {
+      "trans": [ 517.25, 2.19, 784.84 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 517.25, 2.19, 784.84, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-156"
+      }
+    },
+
+    {
+      "trans": [ 429.20, 2.19, 717.15 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 429.20, 2.19, 717.15, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-157"
+      }
+    },
+
+    {
+      "trans": [ 410.70, 2.19, 678.01 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 410.70, 2.19, 678.01, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-158"
+      }
+    },
+
+    {
+      "trans": [ 388.30, 2.19, 664.47 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 388.30, 2.19, 664.47, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-159"
+      }
+    },
+
+    {
+      "trans": [ 370.46, 2.19, 664.42 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 370.46, 2.19, 664.42, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-160"
+      }
+    },
+
+    {
+      "trans": [ 341.51, 2.19, 671.80 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 341.51, 2.19, 671.80, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-161"
+      }
+    },
+
+    {
+      "trans": [ 328.66, 2.19, 686.85 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 328.66, 2.19, 686.85, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-162"
+      }
+    },
+
+    {
+      "trans": [ 316.57, 2.19, 734.80 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 316.57, 2.19, 734.80, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-163"
+      }
+    },
+
+    {
+      "trans": [ 319.93, 2.19, 766.89 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 319.93, 2.19, 766.89, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-164"
+      }
+    },
+
+    {
+      "trans": [ 761.50, 2.19, 532.59 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 761.50, 2.19, 532.59, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-165"
+      }
+    },
+
+    {
+      "trans": [ 753.88, 2.19, 558.87 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 753.88, 2.19, 558.87, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-166"
+      }
+    },
+
+    {
+      "trans": [ 747.62, 2.19, 591.10 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 747.62, 2.19, 591.10, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-167"
+      }
+    },
+
+    {
+      "trans": [ 765.27, 2.19, 617.02 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 765.27, 2.19, 617.02, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-168"
+      }
+    },
+
+    {
+      "trans": [ 789.92, 2.19, 632.69 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 789.92, 2.19, 632.69, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-169"
+      }
+    },
+
+    {
+      "trans": [ 810.65, 2.19, 657.82 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 810.65, 2.19, 657.82, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-170"
+      }
+    },
+
+    {
+      "trans": [ 805.51, 2.19, 689.34 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 805.51, 2.19, 689.34, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-171"
+      }
+    },
+
+    {
+      "trans": [ 792.15, 2.19, 711.11 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 792.15, 2.19, 711.11, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-172"
+      }
+    },
+
+    {
+      "trans": [ 592.93, 53.53, 858.93 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 592.93, 53.53, 858.93, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-173"
+      }
+    },
+
+    {
+      "trans": [ 478.18, 42.21, 813.69 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 478.18, 42.21, 813.69, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-174"
+      }
+    },
+
+    {
+      "trans": [ 468.22, 43.68, 825.11 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 468.22, 43.68, 825.11, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-175"
+      }
+    },
+
+    {
+      "trans": [ 458.77, 45.44, 838.14 ], // translation
+      "etype": "money", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 458.77, 45.44, 838.14, 10 ], // bounding sphere
+      "lump": {
+        "name": "rockpool-money-176"
+      }
+    },
+
+    {
+      "trans": [ 537.80, 10.97, 471.79 ],
+      "etype": "warpgate",
+      "game_task": 0,
+      "quat": [ -0.1204, -0.1174, 0.6881, 0.7057 ],
+      "bsphere": [ 537.80, 10.97, 471.79, 10 ],
+      "lump": {
+        "name": "rockpool-warpgate"
+      }
+    },
+
+    {
+      "trans": [ 534.43, 7.09, 474.54 ],
+      "etype": "warp-gate-switch",
+      "game_task": 120,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 534.43, 7.09, 474.54, 10 ],
+      "lump": {
+        "name": "rockpool-warp-gate-switch",
+        "alt-actor": "rockpool-training-part-1"
+      }
+    },
+
+    {
+      "trans": [ 537.80, 10.97, 471.79 ],
+      "etype": "training-part",
+      "game_task": 0,
+      "quat": [ 0.1204, 0.1174, -0.6881, -0.7057 ],
+      "bsphere": [ 537.80, 10.97, 471.79, 10 ],
+      "lump": {
+        "name": "rockpool-training-part-1",
+        "effect-name": "'warpgate-loop",
+        "art-name": "group-training-warpgate",
+        "effect-param": [ "float", 3.0000, 80.0000, 12.0000, 40.0000 ],
+        "cycle-speed": [ "float", -1.0000, 0.0000 ]
       }
     }
   ]

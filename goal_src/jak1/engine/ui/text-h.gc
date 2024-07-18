@@ -830,6 +830,10 @@
   (input-opts-binds-unknown #x1615)
   (progress-no-other-resolution-options #x1616)
   (input-opts-controller-led-reflect-heat #x1617)
+  (rockpool-level-name #x1700)
+  (rockpool-findcell-cave #x1701)
+  (rockpool-findcell-peak #x1702)
+  (rockpool-ring-race #x1703)
 
   ;; mod text
   (pad-triangle #x2000)

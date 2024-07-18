@@ -2019,7 +2019,7 @@
         )
 
 (define rockpool (new 'static 'level-load-info
-                           :index 27
+                           :index 24
                            :name 'rockpool
                            :visname 'rockpool-vis ;; name + -vis
                            :nickname 'rck          ;; nickname
@@ -2034,7 +2034,7 @@
                            :continues '((new 'static 'continue-point
                                              :name "rockpool-start"
                                              :level 'rockpool
-                                             :trans (new 'static 'vector :x (meters 534.44) :y (meters 7.50) :z (meters 483.20) :w 1.0) ;; 534.44   7.05 483.20
+                                             :trans (new 'static 'vector :x (meters 534.44) :y (meters 7.50) :z (meters 483.20) :w 1.0) ;; 537.37   6.79 475.41
                                              :quat (new 'static 'quaternion  :w 1.0)
                                              :camera-trans (new 'static 'vector :x 0.0 :y -4096.0 :z 0.0 :w 1.0)
                                              :camera-rot (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
@@ -2044,7 +2044,23 @@
                                              :disp0 'display
                                              :lev1 #f
                                              :disp1 #f
-                                             ))
+                                             )
+                            (new 'static 'continue-point
+                                              :name "rockpool-warp"
+                                              :level 'rockpool
+                                              :flags (continue-flags warp)
+                                              :trans (new 'static 'vector :x (meters 537.37) :y (meters 6.79) :z (meters 475.41) :w 1.0)
+                                              :quat (new 'static 'quaternion :y 0.591 :w 0.8066)
+        :camera-trans (new 'static 'vector :x -559109.3 :y 200461.92 :z 826073.06 :w 1.0)
+        :camera-rot (new 'static 'array float 9 0.7221 0.0 -0.6917 -0.0517 0.9972 -0.054 0.6897 0.0747 0.7201)
+                                              :load-commands '()
+                                              :vis-nick 'rockpool
+                                              :lev0 'rockpool
+                                              :disp0 'display
+                                              :lev1 #f
+                                              :disp1 #f
+                                              )
+                           )
                            :tasks '()
                            :priority 100
                            :load-commands '()

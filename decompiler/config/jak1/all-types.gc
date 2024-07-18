@@ -860,7 +860,12 @@
   (plunger-lurker-hit 113)
   (leaving-misty 114)
   (assistant-village3 115)
-  (max 116)
+  (rockpool-buzzer 116)
+  (rockpool-findcell-cave 117)
+  (rockpool-findcell-peak 118)
+  (rockpool-ring-race 119)
+  (rockpool-button 120)
+  (max 121)
   )
 
 (defenum text-id

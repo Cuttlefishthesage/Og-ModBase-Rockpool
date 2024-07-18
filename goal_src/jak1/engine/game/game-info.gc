@@ -183,11 +183,16 @@
   (-> this task-perm-list data arg0)
   )
 
+  (define *game-counts* (the-as game-count-info #f)) ;; added for orb tracking per luminar hack
+
 (defmethod initialize! ((this game-info) (cause symbol) (save-to-load game-save) (continue-point-override string))
   "Initialize the game-info.
     The cause can be 'dead if you die, or 'game to reset everything.
     If save-to-load is not #f will load data from that.
     If continue-point-override is not #f, will use that."
+
+    (set! (-> *game-counts* data 16 money-count) (the-as int 230)) ;; number 16 is rockpools level count found in progress-static
+    (set! (-> *game-counts* data 16 buzzer-count) (the-as int 7))
 
   (local-vars (v0-0 int) (sv-96 symbol))
   (case cause
