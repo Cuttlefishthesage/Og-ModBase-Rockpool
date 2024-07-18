@@ -2123,7 +2123,7 @@
 (goal-src "levels/rockpool/rockpool-obs.gc" "process-drawable")
 
 (goal-src-sequence
- "levels/afon/"
+ "levels/rockpool/"
  :deps ("$OUT/obj/ticky.o") ;; custom code to include parts and obs
  "rockpool-part.gc"
  )
