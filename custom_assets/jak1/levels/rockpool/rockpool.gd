@@ -58,5 +58,6 @@
  "ef-plane-ag.go"
  "sharkey-ag.go"
  "race-ring-ag.go"
+ "water-anim-sunken-ag.go"
  "rockpool.go"
  ))

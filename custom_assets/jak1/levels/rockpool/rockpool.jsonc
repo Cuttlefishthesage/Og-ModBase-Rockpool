@@ -78,7 +78,8 @@
     "race-ring-ag",
     "sunkenfisha-ag",
     "warpgate-ag",
-    "warp-gate-switch-ag"
+    "warp-gate-switch-ag",
+    "water-anim-sunken-ag"
   ],
 
   // If you have any custom models in the "custom_assets/jak1/models" folder that you want to use in your level, add them to this list.
@@ -2386,7 +2387,7 @@
         ],
         "name": "rockpool-ocean-vol",
         "water-height": [ "float", 0.0, 2048.0, 8192.0, 1048588.0 ], // camera height, ?, wadledept, flags
-        "look": [ "int32", 36 ],
+        "look": [ "int32", 8 ],
         "vis-dist": [ "meters", 200.0 ]
       }
     },
