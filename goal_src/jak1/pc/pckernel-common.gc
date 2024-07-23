@@ -273,6 +273,8 @@
   ;; update auto-splitter info
   (update-speedrun obj)
 
+  (set! (-> *pc-settings* ps2-actor-vis?) #f)
+
   (when (not (-> obj use-vis?))
     (update-video-hacks obj)
     )
