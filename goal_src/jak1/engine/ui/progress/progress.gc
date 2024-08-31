@@ -1046,7 +1046,7 @@
               (sound-play "starts-options")
               (sound-volume-off)
               (set! (-> *game-info* mode) 'play)
-              (initialize! *game-info* 'game (the-as game-save #f) "intro-start")
+              (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")
               (set-master-mode 'game)
               )
              (else
@@ -1085,7 +1085,7 @@
               (sound-play "cursor-options")
               (sound-volume-off)
               (set! (-> *game-info* mode) 'play)
-              (initialize! *game-info* 'game (the-as game-save #f) "intro-start")
+              (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")
               (set-master-mode 'game)
               )
              (else
@@ -1103,7 +1103,7 @@
               (sound-play "start-options")
               (sound-volume-off)
               (set! (-> *game-info* mode) 'play)
-              (initialize! *game-info* 'game (the-as game-save #f) "intro-start")
+              (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")
               (set-master-mode 'game)
               )
              ((nonzero? (-> this display-state-stack 0))
@@ -1186,7 +1186,7 @@
               (sound-play "start-options")
               (sound-volume-off)
               (set! (-> *game-info* mode) 'play)
-              (initialize! *game-info* 'game (the-as game-save #f) "intro-start")
+              (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")
               (set-master-mode 'game)
               )
              (else
@@ -1737,7 +1737,7 @@
                       (speedrun-start-full-game-run))
                     ;; start the game normally
                     (else
-                      (initialize! *game-info* 'game (the-as game-save #f) "intro-start")
+                      (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")
                       (set! (-> *setting-control* default auto-save) gp-1)))
                   )
                 (set-master-mode 'game)

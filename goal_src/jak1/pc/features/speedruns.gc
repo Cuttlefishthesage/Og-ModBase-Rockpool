@@ -144,11 +144,11 @@
   (case (-> *speedrun-info* category)
     (((speedrun-category full-game))
       ;; spawn at the geyser warp gate checkpoint
-      (initialize! *game-info* 'game (the-as game-save #f) "game-start")
+      (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")
       )
     (((speedrun-category il-training))
       ;; spawn at the geyser warp gate checkpoint
-      (initialize! *game-info* 'game (the-as game-save #f) "game-start")
+      (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")
       )
     (((speedrun-category il-village1))
       ;; spawn at the green sage hut warp gate
@@ -212,11 +212,11 @@
       )
     (((speedrun-category new-game-plus))
       ;; spawn at the geyser warp gate checkpoint
-      (initialize! *game-info* 'game (the-as game-save #f) "game-start")
+      (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")
       )
     (((speedrun-category hub1-100))
       ;; spawn at the geyser warp gate checkpoint
-      (initialize! *game-info* 'game (the-as game-save #f) "game-start")
+      (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")
       )
     (((speedrun-category hub2-100))
       ;; spawn at end of fire canyon
@@ -232,7 +232,7 @@
       ;; don't allow cutscene skips
       (set! (-> *pc-settings* skip-movies?) #f)
       ;; spawn at the geyser warp gate checkpoint
-      (initialize! *game-info* 'game (the-as game-save #f) "intro-start")
+      (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")
       )
     (else
       (format 0 "start-speedrun: unrecognized category ~S~%" (enum->string speedrun-category (-> *speedrun-info* category)))
