@@ -1924,7 +1924,7 @@
                   ;; Start a new game differently if speedrunning mode is active
                   (speedrun-start-full-game-run)
                   ;; start the game normally
-                  (initialize! *game-info* 'game (the-as game-save #f) "intro-start"))
+                  (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp"))
               (set-master-mode 'game))
              (else
                (sound-play "cursor-options")
@@ -1966,7 +1966,7 @@
                       (speedrun-start-full-game-run))
                      ;; start the game normally
                      (else
-                      (initialize! *game-info* 'game (the-as game-save #f) "intro-start")))
+                      (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")))
                (set-master-mode 'game)
                )
              )
@@ -1985,7 +1985,7 @@
                      (speedrun-start-full-game-run))
                     ;; start the game normally
                     (else
-                     (initialize! *game-info* 'game (the-as game-save #f) "intro-start")))
+                     (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")))
               (set-master-mode 'game)
               )
              ((nonzero? (-> obj display-state-stack 0))
@@ -2074,7 +2074,7 @@
                      (speedrun-start-full-game-run))
                     ;; start the game normally
                     (else
-                     (initialize! *game-info* 'game (the-as game-save #f) "intro-start")))
+                     (initialize! *game-info* 'game (the-as game-save #f) "rockpool-warp")))
               (set-master-mode 'game)
               )
              (else
