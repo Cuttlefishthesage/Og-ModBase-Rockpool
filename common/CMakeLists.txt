@@ -16,11 +16,7 @@ function(write_revision_h)
                 OUTPUT_STRIP_TRAILING_WHITESPACE
                 ERROR_QUIET)
     endif()
-    string(REPLACE "\n" "" GIT_TAG "${GIT_TAG}")
-string(REPLACE "\r" "" GIT_TAG "${GIT_TAG}")
-string(REPLACE "\n" "" GIT_SHORT_SHA "${GIT_SHORT_SHA}")
-string(REPLACE "\r" "" GIT_SHORT_SHA "${GIT_SHORT_SHA}")
-file(WRITE ${CMAKE_CURRENT_SOURCE_DIR}/versions/revision.h "#define BUILT_TAG \"${GIT_TAG}\"\n#define BUILT_SHA \"${GIT_SHORT_SHA}\"\n")
+    file(WRITE ${CMAKE_CURRENT_SOURCE_DIR}/versions/revision.h "#define BUILT_TAG \"${GIT_TAG}\"\n#define BUILT_SHA \"${GIT_SHORT_SHA}\"\n")
 endfunction()
 
 write_revision_h()
